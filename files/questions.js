@@ -216,7 +216,7 @@ var questionsList = [
     Question: "This psychologist performed an experiment on college students and created a mock prison to see how the students would play their roles.",
     A: "John Locke",
     B: "Philip Zimbardo",
-    C: "Wilhem Wundt" ,
+    C: "Wilhem Wundt",
     D: "Stanley Milgram",
     ANS: "B",
   },
@@ -224,7 +224,7 @@ var questionsList = [
     Question:
     A: "Wilhem Wundt",
     B: "Solomon Asch",
-    C: "Sigmund Freud" ,
+    C: "Sigmund Freud",
     D: "Jean Piaget",
     ANS: "C",
   },
