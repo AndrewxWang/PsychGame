@@ -28,5 +28,11 @@ function randomize() {
     randomNum = Math.floor(Math.random() * unitQuestions.length);
 }
 
-randomize();
-createPrompt(researchQuestions);
+function loadSite(){
+    randomize();
+    createPrompt(researchQuestions);
+    
+    setTimeout(function(){
+        document.getElementById("prompt").style.transform = "translateY(-7.5vh)";
+    },300);
+}

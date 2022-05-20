@@ -24,7 +24,7 @@ var socialPsychQuestions = [
     ANS: "C",
   },
   {
-  	Question: "Eric is a reserved and shy student. He tries to be nice to people around him and respects his teachers. However, online, Eric rants on social media and is critical to almost everyone. Which of the following explains Eric’s change in behavior?",
+  	Question: "Eric is a reserved and shy student. He tries to be nice to people around him and respects his teachers. However, online, Eric rants on social media and is critical to almost everyone. Which of the following explains Eric's change in behavior?",
     A: "Group polarization",
     B: "Deindividualization",
     C: "Just world phenomenon",

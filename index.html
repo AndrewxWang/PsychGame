@@ -10,23 +10,28 @@
         <script src="files/research.js"></script> -->
 </head>
 
-<body>
-    <h1>PSYCH</h1>
-    <div id="prompt">
-        <h1 id="questionNum"></h1>
-        </h1>
-        <p id="question"></p>
-        <button id="A" onclick="checkAns('A')"></button>
-        <button id="B" onclick="checkAns('B')"></button>
-        <button id="C" onclick="checkAns('C')"></button>
-        <button id="D" onclick="checkAns('D')"></button>
-    </div>
-    
-    <div id="footer">
-        <a href=" " target="_blank">GitHub Repository</a> | 
-        <p>Created by Andrew Wang</p>
-    </div>
+<body onload="loadSite()">
+    <div class="background">
+        <h1>PSYCH</h1>
+        <div id="prompt">
+            <h1 id="questionNum"></h1>
+            </h1>
+            <p id="question"></p>
+            <button id="A" onclick="checkAns('A')"></button>
+            <button id="B" onclick="checkAns('B')"></button>
+            <button id="C" onclick="checkAns('C')"></button>
+            <button id="D" onclick="checkAns('D')"></button>
+        </div>
 
+        <center>
+            <div id="footer">
+                <a href="https://github.com/AndrewxWang/PsychGame" target="_blank">GitHub Repository</a> | <a href="https://docs.google.com/document/d/1BT4EOerWCgh3GGzLk1jok4SaaYe3JWd1-JTEC75IsTY/edit" target="_blank">Questions/Answers</a>
+                <p>Created by Andrew Wang</p>
+            </div>
+        </center>
+
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
