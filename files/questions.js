@@ -144,7 +144,7 @@ var questionsList = [
     B: "Not being able to form memories",
     C: "Being put in a Coma",
     D: "Loss of hearing",
-    ANS: "",
+    ANS: "C",
   },
   //cognitive psych unit
   {
