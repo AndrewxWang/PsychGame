@@ -221,7 +221,7 @@ var questionsList = [
     ANS: "B",
   },
   {
-    Question:
+    Question: "This psychologist is known as the founder of psychoanalysis and explained psychology through the unconscious mind.",
     A: "Wilhem Wundt",
     B: "Solomon Asch",
     C: "Sigmund Freud",
