@@ -1,10 +1,10 @@
 var questionsList = [
   {
     //research unit
-    Question: "Bob performed an experiment on the relationship between sleep and productivity. Bob's results showed that as sleep went up, productivity went up. Which of the following is NOT an accurate conclusion?",
+    Question: "Bob performed an experiment on the relationship between sleep and productivity. Bob's results showed that as sleep went up, productivity went up. Which of the following is NOT an accurate statement?",
     A: "Sleep and Productivity have a positive correlation",
     B: "Poor sleep causes a decrease in productivity",
-    C: "Sleep and Productivity have a negative correlation",
+    C: "The amount of sleep is the independent variable",
     D: "No conclusion can be drawn from his data",
     ANS: "B",
   },
