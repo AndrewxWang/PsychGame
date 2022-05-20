@@ -3,16 +3,12 @@
 <head>
     <title>Psychology Game</title>
     <link rel="stylesheet" href="style.css">
-    <script src="files/research.js"></script>
-    <script src="files/socialPsych.js"></script>
-    <!-- <script src="files/BBB.js"></script>
-        <script src="files/research.js"></script>
-        <script src="files/research.js"></script> -->
+    <script src="files/questions.js"></script>
 </head>
 
 <body onload="loadSite()">
     <div class="background">
-        <h1>PSYCH</h1>
+        <h1>PSYCHOLOGY GAME</h1>
         <div id="prompt">
             <h1 id="questionNum"></h1>
             </h1>
@@ -22,6 +18,9 @@
             <button id="C" onclick="checkAns('C')"></button>
             <button id="D" onclick="checkAns('D')"></button>
         </div>
+
+        <div id="highscore"></div>
+        <div id="currScore"></div>
 
         <center>
             <div id="footer">

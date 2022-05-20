@@ -16,6 +16,7 @@ html {
     background-color: white;
     height: 100%;
     margin: 0;
+    background: #333;
 }
 
 .background {
@@ -46,6 +47,10 @@ button:hover {
     transform: scale(1.075);
 }
 
+h1 {
+    font-size: 5vh;
+}
+
 #prompt {
     background-color: #493f6d;
     border: 0.5vh solid white;
@@ -73,12 +78,14 @@ button:hover {
 }
 
 #footer {
+    bottom: 0;
+    color: #28223d;
     display: block;
+    font-size: 2vh;
     text-align: center;
     position: fixed;
     transform: translate(calc(50vw - 50%));
-    bottom: 0;
-    color: #28223d;
+    line-height: 0.2vh;
 
 }
 
@@ -90,3 +97,26 @@ button:hover {
 #footer a:hover {
     text-decoration: underline;
 }
+
+#scores {
+    bottom: 0;
+    display: none;
+    position: absolute;
+}
+
+#highscore, #currScore {
+    bottom: 0.5vh;
+    color: rgb(40, 35, 60);
+    display: block;
+    font-size: 3vh;
+    line-height: 4vh;
+    text-align: center;
+    left: 120vh;
+    transition: all 0.5s;
+    right: 120vh;
+    position: fixed;
+    z-index: 0;
+}
+
+#highscore {left: 20vh;}
+#currScore {right: 20vh;}
