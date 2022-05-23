@@ -14,14 +14,14 @@ function createPrompt() {
 
 function checkAns(letter) {
     if (letter == questionsList[randomNum]["ANS"]) {
-        console.log("correct");
+        flashScreen("lightgreen")
         count++;
         score++;
         randomize();
         changeScore(score);
         createPrompt(questionsList);
     } else {
-        console.log("wrong");
+        flashScreen("red")
     }
 }
 
@@ -57,6 +57,13 @@ function scaleUp(myId) {
     document.getElementById(myId).style.fontSize = "5vh";
     setTimeout(function () {
         document.getElementById(myId).style.fontSize = "3vh";
+    }, 250);
+}
+
+function flashScreen(color) {
+    document.getElementById("flash").style.background-color = color;
+    setTimeout(function () {
+        document.getElementById("flash").style.background-color = none;
     }, 250);
 }
 
