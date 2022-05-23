@@ -63,11 +63,11 @@ function scaleUp(myId) {
 function flashScreen(color) {
     document.getElementById("flash").style.display = block;
     setTimeout(function() {
-        document.getElementById("flash").style.background-color = color;
+        document.getElementById("flash").style.backgroundColor = color;
     }, 100);
     setTimeout(function () {
         document.getElementById("flash").style.display = none;
-        document.getElementById("flash").style.background-color = "none";
+        document.getElementById("flash").style.backgroundColor = "none";
     }, 250);
 }
 
