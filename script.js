@@ -14,7 +14,7 @@ function createPrompt() {
 
 function checkAns(letter) {
     if (letter == questionsList[randomNum]["ANS"]) {
-        flashScreen("lightgreen");
+        flashScreen("green");
         count++;
         score++;
         randomize();
