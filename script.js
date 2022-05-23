@@ -61,14 +61,16 @@ function scaleUp(myId) {
 }
 
 function flashScreen(color) {
-    document.getElementById("flash").style.display = block;
-    setTimeout(function() {
-        document.getElementById("flash").style.backgroundColor = color;
-    }, 100);
+    document.getElementById("flash").style.display = "block";
+    document.getElementById("flash").style.opacity = "0.8";
+    document.getElementById("flash").style.backgroundColor = color;
     setTimeout(function () {
-        document.getElementById("flash").style.display = none;
-        document.getElementById("flash").style.backgroundColor = "none";
-    }, 250);
+        document.getElementById("flash").style.opacity = "0";
+        setTimeout(function () {
+            document.getElementById("flash").style.backgroundColor = "none";
+            document.getElementById("flash").style.display = "none";
+		}, 400);
+    }, 150);
 }
 
 function loadSite(){
