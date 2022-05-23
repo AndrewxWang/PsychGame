@@ -86,7 +86,7 @@ h1 {
     position: fixed;
     transform: translate(calc(50vw - 50%));
     line-height: 0.2vh;
-
+    z-index: 2;
 }
 
 #footer a {
@@ -106,7 +106,7 @@ h1 {
   height:100%;
   top:0px;
   left:0px;
-  z-index:1000;
+  z-index: 1;
 }
 
 #scores {
