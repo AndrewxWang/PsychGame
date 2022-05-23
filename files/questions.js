@@ -123,7 +123,7 @@ var questionsList = [
     ANS: "D",
   },
   {
-   Question: "Tom is a high school teenager who makes rash decisions. Which of the following parts of the brain is not develoepd and explains Tom’s inability to make rational decision by himself?",
+   Question: "Tom is a high school teenager who makes rash decisions. Which of the following parts of the brain is not developed and explains Tom’s inability to make rational decision by himself?",
     A: "Frontal lobe",
     B: "Parasympathetic nervous system",
     C: "Medulla",
