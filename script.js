@@ -63,7 +63,7 @@ function scaleUp(myId) {
 function flashScreen(color) {
     document.getElementById("flash").style.background-color = color;
     setTimeout(function () {
-        document.getElementById("flash").style.background-color = none;
+        document.getElementById("flash").style.background-color = "none";
     }, 250);
 }
 
