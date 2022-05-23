@@ -14,14 +14,14 @@ function createPrompt() {
 
 function checkAns(letter) {
     if (letter == questionsList[randomNum]["ANS"]) {
-        flashScreen("lightgreen")
+        flashScreen("lightgreen");
         count++;
         score++;
         randomize();
         changeScore(score);
         createPrompt(questionsList);
     } else {
-        flashScreen("red")
+        flashScreen("red");
     }
 }
 
@@ -61,8 +61,12 @@ function scaleUp(myId) {
 }
 
 function flashScreen(color) {
-    document.getElementById("flash").style.background-color = color;
+    document.getElementById("flash").style.display = block;
+    setTimeout(function() {
+        document.getElementById("flash").style.background-color = color;
+    }, 100);
     setTimeout(function () {
+        document.getElementById("flash").style.display = none;
         document.getElementById("flash").style.background-color = "none";
     }, 250);
 }
