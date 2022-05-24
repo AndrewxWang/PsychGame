@@ -15,7 +15,6 @@ function createPrompt() {
 
 function checkAns(letter) {
     if (letter == questionsList[randomNum]["ANS"]) {
-        console.log("correct");
         flashScreen("green");
         count++;
         score++;
@@ -23,13 +22,18 @@ function checkAns(letter) {
         changeScore(score);
         createPrompt(questionsList);
     } else {
-        console.log("wrong");
-        flashScreen("red");
-        count++;
-        lives--;
-        randomize();
-        createPrompt(questionsList);
-        document.getElementById("heart" + lives).style.opacity = "0";
+        if (lives > 1){
+            flashScreen("red");
+            document.getElementById("heart" + lives).style.visibility = "hidden";
+            count++;
+            lives--;
+            randomize();
+            createPrompt(questionsList);
+        } else {
+            document.getElementById("heart" + lives).style.visibility = "hidden";
+            lives--;
+            alert("GAME OVER");
+        }
     }
 }
 
