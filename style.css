@@ -132,3 +132,7 @@ h1 {
 
 #highscore {left: 20vh;}
 #currScore {right: 20vh;}
+
+#hearts {
+    display: inline-block;
+}
