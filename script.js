@@ -1,3 +1,4 @@
+var lives = 5;
 var count = 1;
 var score = 0;
 var randomNum;
@@ -14,6 +15,7 @@ function createPrompt() {
 
 function checkAns(letter) {
     if (letter == questionsList[randomNum]["ANS"]) {
+        console.log("correct");
         flashScreen("green");
         count++;
         score++;
@@ -21,7 +23,13 @@ function checkAns(letter) {
         changeScore(score);
         createPrompt(questionsList);
     } else {
+        console.log("wrong");
         flashScreen("red");
+        count++;
+        lives--;
+        randomize();
+        createPrompt(questionsList);
+        document.getElementById("heart" + lives).style.opacity = "0";
     }
 }
 
