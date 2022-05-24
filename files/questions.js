@@ -107,7 +107,7 @@ var questionsList = [
     ANS: "A",
   },
   {
-   Question: "This systemis located in the limbic system and plays a major role in developing new memories and learning",
+   Question: "This system is located in the limbic system and plays a major role in developing new memories and learning",
     A: "Ocipital lobe",
     B: "Hippocampus",
     C: "Medulla",
