@@ -134,6 +134,9 @@ h1 {
 #currScore {right: 20vh;}
 
 #hearts {
-    width: 10vh;
     display: inline-block;
+}
+
+#hearts img {
+    width: 5vh;
 }
