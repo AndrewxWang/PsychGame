@@ -147,26 +147,17 @@ h1 {
     visibility: visible;
 }
 
-#gameEnd {
+#gameOver {
     transform: scale(0);
     transition: all 1s;
     visibility: hidden;
 }
 
-#gameEnd h1 {
-    animation: none;
+#gameOver h1 {
     color: white;
     font-size: 30vh;
     text-shadow: #28223d 0.7vh 0.7vh;
-}
 
-#gameEnd h1:hover {
-    animation: shake 1s;
-    animation-iteration-count: infinite;
-}
-
-#playAgainBtn {
-    transform: scale(0);
 }
 
 @keyframes shake {

@@ -25,19 +25,27 @@ function checkAns(letter) {
         document.getElementById("background").style.animation = "shake 0.5s";
         document.getElementById("heart" + lives).style.visibility = "hidden";
         document.getElementById("incorrectSFX").play();
-        flashScreen("red");
         if (lives > 1) {
+            flashScreen("red");
             lives--;
             count++;
             nextQuestion();
         } else {
             lives--;
             document.getElementById("flash").style.display = "block";
-            displayGameOver();
+            document.getElementById("flash").style.opacity = "0.8";
+            document.getElementById("flash").style.backgroundColor = "red";
+            displayGameEnd("gameOver");
+            setTimeout(function() {
+                document.getElementById("flash").style.opacity = "0";
+                setTimeout(function(){
+                    document.getElementById("flash").style.display = "none";
+                }, 1500);    
+            }, 500);
         }
         setTimeout(function(){
             document.getElementById("background").style.animation = "none";
-        }, 200);
+        }, 300);
     }
 }
 
@@ -59,7 +67,7 @@ function randomize() {
             randomNum = Math.floor(Math.random() * questionsList.length);
             sentinel++;
             if (sentinel == 999) {
-                alert("DONE");
+                displayGameEnd("gameWin");
                 break;
             }
         }

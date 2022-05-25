@@ -28,7 +28,12 @@ function nextQuestion(){
     }, 150);
 }
 
-function displayGameOver(){
+function displayGameEnd(determine){
+    if (determine == "gameWin"){
+        document.getElementById("gameEnd").innerHTML = "YOU WON!";
+    } else {
+        document.getElementById("gameEnd").innerHTML = "GAME OVER...";
+    }
     setTimeout(function () {
         document.getElementById("prompt").style.opacity = "0";
         document.getElementById("prompt").style.visibility = "hidden";
