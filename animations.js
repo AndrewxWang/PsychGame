@@ -36,11 +36,6 @@ function displayGameOver(){
             document.getElementById("gameOverSFX").play();
             document.getElementById("gameOver").style.visibility = "visible";
             document.getElementById("gameOver").style.transform = "scale(1)";
-            setTimeout(function () {
-                document.getElementById("gameOver").style.animation = "shake 1s";
-                document.getElementById("gameOver").style.animationIterationCount = "infinite";
-
-            }, 1000);
         }, 1000);
     }, 1000);
 }
