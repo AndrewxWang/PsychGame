@@ -15,25 +15,29 @@ function createPrompt() {
 
 function checkAns(letter) {
     if (letter == questionsList[randomNum]["ANS"]) {
-        flashScreen("green");
+        document.getElementById("correctSFX").play();
+        flashScreen("rgb(59, 208, 0)");
         count++;
         score++;
-        randomize();
         changeScore(score);
-        createPrompt(questionsList);
+        nextQuestion();
     } else {
-        if (lives > 1){
-            flashScreen("red");
-            document.getElementById("heart" + lives).style.visibility = "hidden";
+        document.getElementById("background").style.animation = "shake 0.5s";
+        document.getElementById("heart" + lives).style.visibility = "hidden";
+        document.getElementById("incorrectSFX").play();
+        flashScreen("red");
+        if (lives > 1) {
+            lives--;
             count++;
-            lives--;
-            randomize();
-            createPrompt(questionsList);
+            nextQuestion();
         } else {
-            document.getElementById("heart" + lives).style.visibility = "hidden";
             lives--;
-            alert("GAME OVER");
+            document.getElementById("flash").style.display = "block";
+            displayGameOver();
         }
+        setTimeout(function(){
+            document.getElementById("background").style.animation = "none";
+        }, 200);
     }
 }
 
@@ -49,12 +53,12 @@ function changeScore(score) {
 
 function randomize() {
     randomNum = Math.floor(Math.random() * questionsList.length);
-    if (questionsUsed.includes(randomNum)){
+    if (questionsUsed.includes(randomNum)) {
         var sentinel = 0;
-        while (questionsUsed.includes(randomNum)){
+        while (questionsUsed.includes(randomNum)) {
             randomNum = Math.floor(Math.random() * questionsList.length);
             sentinel++;
-            if (sentinel == 999){
+            if (sentinel == 999) {
                 alert("DONE");
                 break;
             }
@@ -63,29 +67,7 @@ function randomize() {
     questionsUsed.push(randomNum);
 }
 
-
-//animation
-function scaleUp(myId) {
-    document.getElementById(myId).style.fontSize = "5vh";
-    setTimeout(function () {
-        document.getElementById(myId).style.fontSize = "3vh";
-    }, 250);
-}
-
-function flashScreen(color) {
-    document.getElementById("flash").style.display = "block";
-    document.getElementById("flash").style.opacity = "0.8";
-    document.getElementById("flash").style.backgroundColor = color;
-    setTimeout(function () {
-        document.getElementById("flash").style.opacity = "0";
-        setTimeout(function () {
-            document.getElementById("flash").style.backgroundColor = "none";
-            document.getElementById("flash").style.display = "none";
-		}, 400);
-    }, 150);
-}
-
-function loadSite(){
+function loadSite() {
     if (!localStorage.highScore) {
         localStorage.highScore = 0;
     }
@@ -95,11 +77,12 @@ function loadSite(){
     }
     document.getElementById("highscore").innerHTML = "High Score: " + localStorage.highScore;
     document.getElementById("currScore").innerHTML = "Score: " + score;
-    
+
     randomize();
     createPrompt();
-    
-    setTimeout(function(){
-        document.getElementById("prompt").style.transform = "translateY(-5.5vh)";
-    },300);
+
+    setTimeout(function () {
+        document.getElementById("prompt").style.transform = "translateY(0)";
+    }, 300);
 }
+
