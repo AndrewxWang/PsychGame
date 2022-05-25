@@ -28,7 +28,7 @@ var questionsList = [
     Question: "Which of the following best explains why researchers define operational definitions?",
     A: "To following ethical laws of Psychology",
     B: "To make sure the participants are unaware of the experimental group",
-    C: "To ensure that the experiment is reproducable ",
+    C: "To ensure that the experiment is reproducible ",
     D: "To see how a placebo can impact the results of the control group",
     ANS: "C",
   },
@@ -82,7 +82,7 @@ var questionsList = [
     ANS: "B",
   },
   {
-    Question: "Jodi is usually a well-performing student, but when she is with her friends, she goofs off and does not do work. Which of the following best explains Jodi’s behavior?",
+    Question: "Jodi is usually a well-performing student, but when she is with her friends, she goofs off and does not do work. Which of the following best explains Jodi's behavior?",
     A: "Social inhibition",
     B: "Social loafing",
     C: "Just world phenomenon",
@@ -91,7 +91,7 @@ var questionsList = [
   },
   {
     Question: "Pat is walking down a crowded street and sees a man trip over and drop his belongings. However, Pat does not offer to help and continues walking. Which of the following explains why Pat does not help the man.",
-    A: "Bysander effect",
+    A: "Bystander effect",
     B: "Groupthink",
     C: "Social facilitation",
     D: "Law of effect",
@@ -108,14 +108,14 @@ var questionsList = [
   },
   {
    Question: "This system is located in the limbic system and plays a major role in developing new memories and learning",
-    A: "Ocipital lobe",
+    A: "Occipital lobe",
     B: "Hippocampus",
     C: "Medulla",
     D: "Parasympathetic nervous system",
     ANS: "B",
   },
   {
-   Question: "The Broca’s and Wernicke’s area are areas of the brain that help with language production and comprehension. When the Wernicke’s area, in particular, is damaged, which of the following disorders is associated with this damage?",
+   Question: "The Broca's and Wernicke's areas are parts of the brain that help with language production and comprehension. When the Wernicke's area, in particular, is damaged, which of the following disorders is associated with this damage?",
     A: "Obsessive-compulsive disorder.",
     B: "Bipolar disorder",
     C: "PTSD  ",
@@ -123,7 +123,7 @@ var questionsList = [
     ANS: "D",
   },
   {
-   Question: "Tom is a high school teenager who makes rash decisions. Which of the following parts of the brain is not developed and explains Tom’s inability to make rational decision by himself?",
+   Question: "Tom is a high school teenager who makes rash decisions. Which of the following parts of the brain is not developed and explains Tom's inability to make rational decisions by himself?",
     A: "Frontal lobe",
     B: "Parasympathetic nervous system",
     C: "Medulla",
@@ -131,7 +131,7 @@ var questionsList = [
     ANS: "A",
   },
   {
-    Question: "This part of the brain is what connects the left and right hemisphere. Split brain patients ahve this severed to eliminate connection between the two hemispheres.",
+    Question: "This part of the brain is what connects the left and right hemispheres. Split-brain patients have this severed to eliminate connection between the two hemispheres.",
     A: "Cerebellum",
     B: "Prefrontal cortex",
     C: "Reflex arc",
@@ -148,15 +148,15 @@ var questionsList = [
   },
   //cognitive psych unit
   {
-   Question: "Frank is an employer who wants to hire new employees. Frank wants to test the employees’ current ability and individual skills. Which of the following assessments should Frank use to determine who to hire?",
+   Question: "Frank is an employer who wants to hire new employees. Frank wants to test the employees' current ability and individual skills. Which of the following assessments should Frank use to determine who to hire?",
     A: "Aptitude test",
-    B: "Standarized test",
+    B: "Standardized test",
     C: "Diagnostic test",
     D: "Achievement test",
     ANS: "D",
   },
   {
-   Question: "Jake takes a personality test which tells him he is a extroverted, social person. However, Jake takes the same test 2 days later and the test tells him that he is reserved and shy. Due to Jake’s difference of scores, which of the following best explains what the test is lacking?",
+   Question: "Jake takes a personality test which tells him he is an extroverted, social person. However, Jake takes the same test 2 days later and the test tells him that he is reserved and shy. Due to Jake's difference of scores, which of the following best explains what the test is lacking?",
     A: "Validity",
     B: "Operational definitions",
     C: "Reliability",
@@ -172,7 +172,7 @@ var questionsList = [
     ANS: "B",
   },
   {
-   Question: "During a test, Jim’s arousal must be maintained in order to do well. Jim can’t  be too nervous or excited about the test and he also can’t be too relaxed during the test. Which of the following theories of motivation explains how Jim’s performance is correlated with his arousal?",
+   Question: "During a test, Jim's arousal must be maintained in order to do well. Jim can't  be too nervous or excited about the test and he also can't be too relaxed during the test. Which of the following theories of motivation explains how Jim's performance is correlated with his arousal?",
     A: "Optimal arousal theory",
     B: "Drive reduction theory",
     C: "Incentive theory",
@@ -180,7 +180,7 @@ var questionsList = [
     ANS: "A",
   },
   {
-   Question: "Kate’s friend, Bob, whispers to her during a test and asks if she can tell him the answer to question 5. Kate, however, refuses because she believes that cheating is not right and is looked down upon in society. Which of the following stages of Kohlberg’s Cognitive Moral Development model explain Kate’s thought process?",
+   Question: "Kate's friend, Bob, whispers to her during a test and asks if she can tell him the answer to question 5. Kate, however, refuses because she believes that cheating is not right and is looked down upon in society. Which of the following stages of Kohlberg's Cognitive Moral Development model explain Kate's thought process?",
     A: "Preconventional",
     B: "Conventional",
     C: "Postconventional",
@@ -188,7 +188,7 @@ var questionsList = [
     ANS: "B",
   },
   {
-   Question: "Harry Harlow’s research on attachment using monkey showcased that monkeys",
+   Question: "Harry Harlow's research on attachment using monkey showcased that monkeys",
     A: "Do not show and signs of separation anxiety when they are away from their mothers	",
     B: "Will not eat if their mother is not next to them",
     C: "Prefer mothers that provide food over comfort",

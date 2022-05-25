@@ -1,14 +1,19 @@
 <html>
+
 <head>
     <title>Psychology Game</title>
-    <link rel="ïcon" href="images/icons/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link rel="icon" href="images/icons/icon.png">
     <link rel="stylesheet" href="style.css">
     <script src="files/questions.js"></script>
+    
 </head>
 
 <body onload="loadSite()">
     <div id="flash"></div>
-    <div class="background">
+    <div id="background">
         <h1>PSYCHOLOGY GAME</h1>
 
         <div id="hearts">
@@ -35,13 +40,34 @@
 
         <center>
             <div id="footer">
-                <a href="https://github.com/AndrewxWang/PsychGame" target="_blank">GitHub Repository</a> | <a href="https://docs.google.com/document/d/1BT4EOerWCgh3GGzLk1jok4SaaYe3JWd1-JTEC75IsTY/edit" target="_blank">Questions/Answers</a>
+                <a href="https://github.com/AndrewxWang/PsychGame" target="_blank">GitHub Repository</a> | <a
+                    href="https://docs.google.com/document/d/1BT4EOerWCgh3GGzLk1jok4SaaYe3JWd1-JTEC75IsTY/edit"
+                    target="_blank">Questions/Answers</a>
                 <p>Created by Andrew Wang</p>
             </div>
         </center>
 
+        <div id="gameOver">
+            <h1>GAME OVER</h1>
+        </div>
     </div>
+
+    <audio id="correctSFX" controls preload="auto">
+        <source src="audio/correct.ogg" type="audio/ogg">
+        <source src="audio/correct.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="incorrectSFX" controls preload="auto">
+        <source src="audio/incorrect.ogg" type="audio/ogg">
+        <source src="audio/incorrect.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="gameOverSFX" controls preload="auto">
+        <source src="audio/gameover.ogg" type="audio/ogg">
+        <source src="audio/gameover.mp3" type="audio/mpeg">
+    </audio>
+
     <script src="script.js"></script>
+    <script src="animations.js"></script>
 
 </body>
+
 </html>
