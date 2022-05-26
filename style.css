@@ -3,7 +3,6 @@
     font-weight: bolder;
     letter-spacing: 0.2vh;
     text-align: center;
-    transition: all .1s;
 }
 
 body,
@@ -33,6 +32,7 @@ button {
     background-color: lightgray;
     border-bottom: 0.5vh solid #28223d;
     font-size: 2.5vh;
+    transition: all .1s;
     margin-right: 1vh;
 }
 
@@ -45,6 +45,10 @@ button:hover {
 
 h1 {
     font-size: 5vh;
+}
+
+#title {
+    padding-top: 1.5vh;
 }
 
 #prompt {
@@ -137,13 +141,15 @@ h1 {
 }
 
 #hearts {
-    bottom: 45vh;
+    bottom: -79.5vh;
     text-align: center;
     display: inline-block;
-    position: fixed;
+    position: relative;
 }
 
 #hearts img {
+    transition: transform 0.5s;
+    transform: scale(0);
     width: 5vh;
     visibility: visible;
 }
@@ -156,7 +162,9 @@ h1 {
 
 #gameOver h1 {
     color: white;
-    font-size: 30vh;
+    font-size: 25vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
     text-shadow: #28223d 0.7vh 0.7vh;
 
 }

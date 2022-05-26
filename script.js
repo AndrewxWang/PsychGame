@@ -41,7 +41,7 @@ function checkAns(letter) {
                 setTimeout(function(){
                     document.getElementById("flash").style.display = "none";
                 }, 1500);    
-            }, 500);
+            }, 100);
         }
         setTimeout(function(){
             document.getElementById("background").style.animation = "none";
@@ -88,9 +88,10 @@ function loadSite() {
 
     randomize();
     createPrompt();
+    scaleInHearts();
 
     setTimeout(function () {
-        document.getElementById("prompt").style.transform = "translateY(0)";
+        document.getElementById("prompt").style.transform = "translateY(-5.5vh)";
     }, 300);
 }
 

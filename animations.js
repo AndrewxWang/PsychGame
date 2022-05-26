@@ -1,4 +1,12 @@
 //animations
+
+function scaleInHearts() {
+    for (let i = 1; i <= lives; i++){
+        setTimeout(() => {
+            document.getElementById("heart" + i).style.transform = "scale(1)";
+        },1000);
+    }
+}
 function scaleUp(myId) {
     document.getElementById(myId).style.fontSize = "5vh";
     setTimeout(function () {
@@ -22,7 +30,7 @@ function flashScreen(color) {
 function nextQuestion(){
     document.getElementById("prompt").style.transform = "scale(0.75)";
     setTimeout(function () {
-        document.getElementById("prompt").style.transform = "scale(1)";
+        document.getElementById("prompt").style.transform = "translateY(-5.5vh) scale(1)";
         randomize();
         createPrompt();
     }, 150);
