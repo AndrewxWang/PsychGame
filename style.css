@@ -140,6 +140,7 @@ h1 {
     bottom: 45vh;
     text-align: center;
     display: inline-block;
+    position: fixed;
 }
 
 #hearts img {
