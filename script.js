@@ -50,7 +50,7 @@ function checkAns(letter) {
         if (count%10 == 0){
             displayUnit(count);
         }
-    }, 200);
+    }, 550);
 }
 
 function changeScore(score) {
