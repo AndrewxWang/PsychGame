@@ -97,7 +97,7 @@ var questionsList = [
     D: "Law of effect",
     ANS: "A",
   },
-  //biological basis of behavior unit
+  //biological bases of behavior unit
   {
    Question: "You are walking around a park and you see a bear. Your pupils begin to dilate and your heart rate increases. Which of the following contributes to your response?",
     A: "Sympathetic nervous system",
@@ -229,3 +229,11 @@ var questionsList = [
     ANS: "C",
   },
 ];
+
+var unitList = [
+  "Research",
+  "Social Psychology",
+  "Biological Bases of Behavior",
+  "Cognitive Psychology",
+  "Psychologist names"
+]

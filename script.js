@@ -1,20 +1,19 @@
 var lives = 5;
-var count = 1;
+var count = 0;
 var score = 0;
-var randomNum;
 var questionsUsed = [];
 
 function createPrompt() {
-    document.getElementById("questionNum").innerHTML = "Question " + count + ":";
-    document.getElementById("question").innerHTML = questionsList[randomNum]["Question"];
-    document.getElementById("A").innerHTML = "A. " + questionsList[randomNum]["A"];
-    document.getElementById("B").innerHTML = "B. " + questionsList[randomNum]["B"];
-    document.getElementById("C").innerHTML = "C. " + questionsList[randomNum]["C"];
-    document.getElementById("D").innerHTML = "D. " + questionsList[randomNum]["D"];
+    document.getElementById("questionNum").innerHTML = "Question " + (count+1) + ":";
+    document.getElementById("question").innerHTML = questionsList[count]["Question"];
+    document.getElementById("A").innerHTML = "A. " + questionsList[count]["A"];
+    document.getElementById("B").innerHTML = "B. " + questionsList[count]["B"];
+    document.getElementById("C").innerHTML = "C. " + questionsList[count]["C"];
+    document.getElementById("D").innerHTML = "D. " + questionsList[count]["D"];
 }
 
 function checkAns(letter) {
-    if (letter == questionsList[randomNum]["ANS"]) {
+    if (letter == questionsList[count]["ANS"]) {
         document.getElementById("correctSFX").play();
         flashScreen("rgb(59, 208, 0)");
         count++;
@@ -45,6 +44,9 @@ function checkAns(letter) {
         }
         setTimeout(function(){
             document.getElementById("background").style.animation = "none";
+            if (count%10 == 0){
+                displayUnit(count);
+            }
         }, 300);
     }
 }
@@ -59,22 +61,6 @@ function changeScore(score) {
     }
 }
 
-function randomize() {
-    randomNum = Math.floor(Math.random() * questionsList.length);
-    if (questionsUsed.includes(randomNum)) {
-        var sentinel = 0;
-        while (questionsUsed.includes(randomNum)) {
-            randomNum = Math.floor(Math.random() * questionsList.length);
-            sentinel++;
-            if (sentinel == 999) {
-                displayGameEnd("gameWin");
-                break;
-            }
-        }
-    }
-    questionsUsed.push(randomNum);
-}
-
 function loadSite() {
     if (!localStorage.highScore) {
         localStorage.highScore = 0;
@@ -86,7 +72,6 @@ function loadSite() {
     document.getElementById("highscore").innerHTML = "High Score: " + localStorage.highScore;
     document.getElementById("currScore").innerHTML = "Score: " + score;
 
-    randomize();
     createPrompt();
     scaleInHearts();
 
@@ -94,4 +79,3 @@ function loadSite() {
         document.getElementById("prompt").style.transform = "translateY(-5.5vh)";
     }, 300);
 }
-

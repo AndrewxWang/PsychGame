@@ -27,11 +27,23 @@ function flashScreen(color) {
     }, 150);
 }
 
+function displayUnit(count) {
+    document.getElementById("flash").style.display = "block";
+    document.getElementById("flash").style.opacity = "1";
+    document.getElementById("flash").style.backgroundColor = "black";
+    setTimeout(function () {
+        document.getElementById("flash").style.opacity = "0";
+        setTimeout(function () {
+            document.getElementById("flash").style.backgroundColor = "none";
+            document.getElementById("flash").style.display = "none";
+        }, 400);
+    }, 150);
+}
+
 function nextQuestion(){
     document.getElementById("prompt").style.transform = "scale(0.75)";
     setTimeout(function () {
         document.getElementById("prompt").style.transform = "translateY(-5.5vh) scale(1)";
-        randomize();
         createPrompt();
     }, 150);
 }
