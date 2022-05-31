@@ -203,7 +203,7 @@ h1 {
     color: white;
     top: 50%;
     transform: translateY(-50%);
-    position: fixed;
+    position: relative;
     font-size: 25vh;
     z-index: 1000;
 }
