@@ -37,7 +37,7 @@ function displayUnit(count) {
             document.getElementById("flash").style.backgroundColor = "none";
             document.getElementById("flash").style.display = "none";
         }, 400);
-    }, 150);
+    }, 100);
 }
 
 function nextQuestion(){
