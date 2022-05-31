@@ -204,7 +204,7 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     position: relative;
-    font-size: 40vh;
+    font-size: 35vh;
     z-index: 1000;
 }
 
