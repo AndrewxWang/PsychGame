@@ -33,8 +33,8 @@ function displayUnit(count) {
     document.getElementById("flash").style.opacity = "1";
     document.getElementById("flash").style.backgroundColor = "black";
     setTimeout(function () {
+        document.getElementById("flash").style.opacity = "0";
         setTimeout(function () {
-            document.getElementById("flash").style.opacity = "0";
             document.getElementById("flash").style.backgroundColor = "none";
             document.getElementById("flash").style.display = "none";
             document.getElementById("unitText").innerHTML = "";
