@@ -74,6 +74,7 @@ function loadSite() {
     document.getElementById("highscore").innerHTML = "High Score: " + localStorage.highScore;
     document.getElementById("currScore").innerHTML = "Score: " + score;
 
+    displayUnit(count);
     createPrompt();
     scaleInHearts();
 
