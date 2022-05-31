@@ -201,9 +201,10 @@ h1 {
 
 #unitText {
     color: white;
+    display: inline-block;
     top: 50%;
     transform: translateY(-50%);
-    position: relative;
+    position: fixed;
     font-size: 25vh;
     z-index: 1000;
 }
