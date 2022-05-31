@@ -1,10 +1,10 @@
 //animations
 
 function scaleInHearts() {
-    for (let i = 1; i <= lives; i++){
+    for (let i = 1; i <= lives; i++) {
         setTimeout(() => {
             document.getElementById("heart" + i).style.transform = "scale(1)";
-        },1000);
+        }, 1000);
     }
 }
 function scaleUp(myId) {
@@ -28,7 +28,15 @@ function flashScreen(color) {
 }
 
 function displayUnit(count) {
-    document.getElementById("unitText").innerHTML = "Unit " + (count+1) + ": <br>" + unitList[count/10];
+    if (count > 0){
+        document.getElementById("nextUnitSFX").play();
+    }
+    
+    if (count >= questionsList.length) {
+        document.getElementById("unitText").innerHTML = "DONE!";
+    } else {
+        document.getElementById("unitText").innerHTML = "Unit " + ((count / 8) + 1) + ": <br>" + unitList[count / 8];
+    }
     document.getElementById("flash").style.display = "block";
     document.getElementById("flash").style.opacity = "1";
     document.getElementById("flash").style.backgroundColor = "black";
@@ -37,19 +45,25 @@ function displayUnit(count) {
         document.getElementById("flash").style.opacity = "0";
         document.getElementById("flash").style.backgroundColor = "none";
         document.getElementById("unitText").innerHTML = "";
+
+        if (count >= questionsList.length) {
+            displayGameEnd("gameWin");
+        } else {
+            createPrompt();
+        }
     }, 2000);
 }
 
-function nextQuestion(){
-    document.getElementById("prompt").style.transform = "scale(0.75)";
+function nextQuestion() {
+    document.getElementById("prompt").style.transform = "scale(0.2)";
     setTimeout(function () {
         document.getElementById("prompt").style.transform = "translateY(-5.5vh) scale(1)";
         createPrompt();
     }, 150);
 }
 
-function displayGameEnd(determine){
-    if (determine == "gameWin"){
+function displayGameEnd(determine) {
+    if (determine == "gameWin") {
         document.getElementById("gameEnd").innerHTML = "YOU WON!";
     } else {
         document.getElementById("gameEnd").innerHTML = "GAME OVER...";
@@ -63,4 +77,11 @@ function displayGameEnd(determine){
             document.getElementById("gameOver").style.transform = "scale(1)";
         }, 1000);
     }, 1000);
+}
+
+//game end (lost)
+function endFlash() {
+    document.getElementById("flash").style.display = "block";
+    document.getElementById("flash").style.opacity = "0.8";
+    document.getElementById("flash").style.backgroundColor = "red";
 }

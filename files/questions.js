@@ -17,6 +17,14 @@ var questionsList = [
     ANS: "A",
   },
   {
+    Question: "Jerry wants to find out if dogs learn quicker if they are given a treat. Which of the following defines what the dependent variable is in the experiment?",
+    A: "The type of dog trained",
+    B: "How quick the dogs learn",
+    C: "The number of treats",
+    D: "Jerry",
+    ANS: "B",
+  },
+  {
     Question: "Which of the following components of an experiment is used in order to control the confounding variables?",
     A: "Random sampling",
     B: "Operational definitions",
@@ -26,14 +34,14 @@ var questionsList = [
   },
   {
     Question: "Which of the following best explains why researchers define operational definitions?",
-    A: "To following ethical laws of Psychology",
+    A: "To follow ethical laws of Psychology",
     B: "To make sure the participants are unaware of the experimental group",
-    C: "To ensure that the experiment is reproducible ",
+    C: "To ensure that the experiment is reproducible",
     D: "To see how a placebo can impact the results of the control group",
     ANS: "C",
   },
   {
-    Question: "Sara created a survey to see how many hours of sleep a high school student gets every night. So far, she has surveyed 5 people and here are the results: 5 hours, 7 hours, 8 hours, 6 hours, and 4 hours. Calculate the mean.",
+    Question: "Sara created a survey to see how many hours of sleep a high school student gets every night. So far, she has surveyed 5 people, and here are the results: 5 hours, 7 hours, 8 hours, 6 hours, and 4 hours. Calculate the mean.",
     A: "5",
     B: "6",
     C: "7",
@@ -48,6 +56,15 @@ var questionsList = [
     D: "Longitudinal Study",
     ANS: "C",
   },
+  {
+    Question: "After Jerry’s experiment with dogs is completed, the following data is shown about how many treats the dogs ate: 2, 2, 3, 4, 4, 4, 6, 7. Which of the following is the mode?",
+    A: "2",
+    B: "7",
+    C: "5",
+    D: "4",
+    ANS: "D",
+  },
+
   //social psych unit
   {
     Question: "Christina begins to like rap music after listening to it on the radio for numerous days. Which of the following explains the reason for Christina to like rap?",
@@ -97,6 +114,23 @@ var questionsList = [
     D: "Law of effect",
     ANS: "A",
   },
+  {
+    Question: "In crowded areas, people generally feel deindividualized and do not help others in need. Which of the following best explains the reason why the Bystander Effect occurs?",
+    A: "Habituation",
+    B: "Diffusion of responsibility",
+    C: "Groupthink",
+    D: "Ingroup/Outgroup bias",
+    ANS: "B",
+  },
+  {
+    Question: "Jake claims that he has no bias towards different races, but feels uncomfortable when he is in a room of mixed people. Which of the following best explains Jake’s attitude?",
+    A: "Implicit bias",
+    B: "Ingroup/Outgroup bias",
+    C: "Discrimination",
+    D: "Other-race effect",
+    ANS: "A",
+  },
+
   //biological bases of behavior unit
   {
    Question: "You are walking around a park and you see a bear. Your pupils begin to dilate and your heart rate increases. Which of the following contributes to your response?",
@@ -116,9 +150,9 @@ var questionsList = [
   },
   {
    Question: "The Broca's and Wernicke's areas are parts of the brain that help with language production and comprehension. When the Wernicke's area, in particular, is damaged, which of the following disorders is associated with this damage?",
-    A: "Obsessive-compulsive disorder.",
+    A: "Obsessive-compulsive disorder",
     B: "Bipolar disorder",
-    C: "PTSD  ",
+    C: "PTSD",
     D: "Aphasia",
     ANS: "D",
   },
@@ -146,6 +180,23 @@ var questionsList = [
     D: "Loss of hearing",
     ANS: "C",
   },
+  {
+    Question: "This system in the brain secretes hormones and is responsible for mood, development, and helps maintain homeostasis. A key part of this system is the Hypothalamus.",
+    A: "Limbic System",
+    B: "Endocrine System",
+    C: "Hippocampus System",
+    D: "Neuron System",
+    ANS: "B",
+  },
+  {
+    Question: "Judy gets into an argument with her best friends and feels extremely mad and angry. Which of the following systems in the brain causes Judy to feel that way?",
+    A: "Pineal gland",
+    B: "Reticular formation",
+    C: "Amygdala",
+    D: "Medulla",
+    ANS: "C",
+  },
+
   //cognitive psych unit
   {
    Question: "Frank is an employer who wants to hire new employees. Frank wants to test the employees' current ability and individual skills. Which of the following assessments should Frank use to determine who to hire?",
@@ -195,6 +246,23 @@ var questionsList = [
     D: "Prefer mothers that provide comfort over food",
     ANS: "D",
   },
+  {
+    Question: "Justin believes that he is an auditory learner and believes that learning styles are real. Justin then searches online for information that ONLY proves that learning styles are real. Which of the following is Justin engaging in?",
+    A: "Misinformation effect",
+    B: "Overjustification Effect",
+    C: "Confirmation bias",
+    D: "Framing",
+    ANS: "C",
+  },
+  {
+    Question: "After Justin learns that learning styles are a myth, Justin refuses to accept the truth and continues to believe that he is an auditory learner. Which of the following best explains Justins's behavior?",
+    A: "Overjustification Effect",
+    B: "Belief Perserverance",
+    C: "Overconfidence",
+    D: "Mental set",
+    ANS: "B",
+  },
+
   //psych names
   {
     Question: "This person performed an experiment known as the Little Albert Experiment and discovered the classical conditioning principles and the generalization of fear.",
@@ -228,6 +296,39 @@ var questionsList = [
     D: "Jean Piaget",
     ANS: "C",
   },
+  {
+    Question: "This psychologist performed an experiment on young children by putting them into a room with their mother and a stranger to study different attachment styles",
+    A: "Mary Ainsworth",
+    B: "Carl Rogers",
+    C: "Erik Erikson",
+    D: "Abraham Maslow",
+    ANS: "A",
+  },
+  {
+    Question: "This psychologist is known for his line experiment where he showed the impacts of normative social influence and conformity.",
+    A: "Solomon Asch",
+    B: "Philip Zimbardo",
+    C: "Stanley Milgram",
+    D: "Carl Rogers",
+    ANS: "A",
+  },
+  {
+    Question: "This psychologist studied split-brain patients and discovered that both hemispheres of the brain are responsible for different sides of the body and have separate functions.",
+    A: "Alfred Adler",
+    B: "Mary Whiton Calkins",
+    C: "Carl Jung",
+    D: "Roger Sperry",
+    ANS: "D",
+  },
+  {
+    Question: "This psychologist is known for his theory of intelligence about the g-factor, a general intelligence that measures one’s intelligence based on different cognitive abilities",
+    A: "Howard Gardner",
+    B: "Charles Spearman",
+    C: "Jean Piaget",
+    D: "Edward Thorndike",
+    ANS: "B",
+  },
+
 ];
 
 var unitList = [

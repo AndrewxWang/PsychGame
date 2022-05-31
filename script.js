@@ -19,7 +19,6 @@ function checkAns(letter) {
         count++;
         score++;
         changeScore(score);
-        nextQuestion();
     } else {
         document.getElementById("background").style.animation = "shake 0.5s";
         document.getElementById("heart" + lives).style.visibility = "hidden";
@@ -28,12 +27,9 @@ function checkAns(letter) {
             flashScreen("red");
             lives--;
             count++;
-            nextQuestion();
         } else {
             lives--;
-            document.getElementById("flash").style.display = "block";
-            document.getElementById("flash").style.opacity = "0.8";
-            document.getElementById("flash").style.backgroundColor = "red";
+            endFlash();
             displayGameEnd("gameOver");
             setTimeout(function() {
                 document.getElementById("flash").style.opacity = "0";
@@ -42,15 +38,17 @@ function checkAns(letter) {
                 }, 1500);    
             }, 100);
         }
-        setTimeout(function(){
-            document.getElementById("background").style.animation = "none";
-        }, 300);
     }
     setTimeout(function(){
-        if (count == 1){
+        document.getElementById("background").style.animation = "none";  
+    }, 300);
+    setTimeout(function(){
+        if (count%8 == 0){
             displayUnit(count);
+        } else if (lives > 0){
+            nextQuestion();
         }
-    }, 450);
+    }, 502);
 }
 
 function changeScore(score) {
