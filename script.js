@@ -44,11 +44,13 @@ function checkAns(letter) {
         }
         setTimeout(function(){
             document.getElementById("background").style.animation = "none";
-            if (count%10 == 0){
-                displayUnit(count);
-            }
         }, 300);
     }
+    setTimeout(function(){
+        if (count%10 == 0){
+            displayUnit(count);
+        }
+    },200);
 }
 
 function changeScore(score) {
