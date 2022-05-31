@@ -28,6 +28,7 @@ function flashScreen(color) {
 }
 
 function displayUnit(count) {
+    document.getElementById("unitText").innerHTML = unitList[count/10];
     document.getElementById("flash").style.display = "block";
     document.getElementById("flash").style.opacity = "1";
     document.getElementById("flash").style.backgroundColor = "black";
@@ -36,6 +37,7 @@ function displayUnit(count) {
         setTimeout(function () {
             document.getElementById("flash").style.backgroundColor = "none";
             document.getElementById("flash").style.display = "none";
+            document.getElementById("unitText").innerHTML = "";
         }, 400);
     }, 1000);
 }
