@@ -33,13 +33,11 @@ function displayUnit(count) {
     document.getElementById("flash").style.opacity = "1";
     document.getElementById("flash").style.backgroundColor = "black";
     setTimeout(function () {
-        setTimeout(function () {
-            document.getElementById("flash").style.display = "none";
-            document.getElementById("flash").style.opacity = "0";
-            document.getElementById("flash").style.backgroundColor = "none";
-            document.getElementById("unitText").innerHTML = "";
-        }, 400);
-    }, 1000);
+        document.getElementById("flash").style.display = "none";
+        document.getElementById("flash").style.opacity = "0";
+        document.getElementById("flash").style.backgroundColor = "none";
+        document.getElementById("unitText").innerHTML = "";
+    }, 2000);
 }
 
 function nextQuestion(){
