@@ -231,9 +231,9 @@ var questionsList = [
 ];
 
 var unitList = [
-  "Research",
+  "Research Methods/Statistics",
   "Social Psychology",
   "Biological Bases of Behavior",
   "Cognitive Psychology",
-  "Psychologist names"
+  "Psychologist Names"
 ]
