@@ -47,10 +47,10 @@ function checkAns(letter) {
         }, 300);
     }
     setTimeout(function(){
-        if (count%10 == 0){
+        if (count == 2){
             displayUnit(count);
         }
-    }, 525);
+    }, 515);
 }
 
 function changeScore(score) {
