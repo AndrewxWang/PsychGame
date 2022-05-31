@@ -199,6 +199,12 @@ h1 {
     }
 }
 
+#unitText {
+    color: white;
+    position: fixed;
+    font-size: 50vh;
+}
+
 @font-face {
     font-family: GAME_FONT;
     src: url(fonts/GAME_FONT.woff);
