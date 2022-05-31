@@ -201,8 +201,10 @@ h1 {
 
 #unitText {
     color: white;
+    top: 50%;
+    transform: translateY(-50%);
     position: relative;
-    font-size: 50vh;
+    font-size: 40vh;
     z-index: 1000;
 }
 
