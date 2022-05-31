@@ -24,7 +24,7 @@ function flashScreen(color) {
             document.getElementById("flash").style.backgroundColor = "none";
             document.getElementById("flash").style.display = "none";
         }, 400);
-    }, 150);
+    }, 100);
 }
 
 function displayUnit(count) {
