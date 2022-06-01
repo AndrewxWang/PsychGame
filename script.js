@@ -49,7 +49,12 @@ function checkAns(letter) {
             nextQuestion();
         }
     }, 502);
+    if (lives == 1){
+        getBrain();
+    }
 }
+
+
 
 function changeScore(score) {
     scaleUp("currScore");

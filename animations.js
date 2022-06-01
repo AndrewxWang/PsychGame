@@ -79,6 +79,11 @@ function displayGameEnd(determine) {
     }, 1000);
 }
 
+function getBrain(){
+    document.getElementById("brain").style.visiblity = "visible";
+    document.getElementById("brain").style.transform = "scale(1)";
+}
+
 //game end (lost)
 function endFlash() {
     document.getElementById("flash").style.display = "block";

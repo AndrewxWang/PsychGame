@@ -169,6 +169,30 @@ h1 {
 
 }
 
+#unitText {
+    color: white;
+    top: 50%;/images/icons/brain.png
+    transform: translateY(-50%);
+    position: relative;
+    font-size: 25vh;
+    z-index: 1000;
+}
+
+#brain {
+    visibility: hidden;
+    margin-left: 35vh;
+    margin-right: 35vh;
+    text-align: center;
+    position: fixed;
+    transform: scale(0.01);
+    transition: transform 1s;
+}
+
+@font-face {
+    font-family: GAME_FONT;
+    src: url(fonts/GAME_FONT.woff);
+}
+
 @keyframes shake {
     0% {
         transform: translate(0px, 0px) rotate(0deg);
@@ -197,18 +221,4 @@ h1 {
     100% {
         transform: translate(0px, 0px) rotate(0deg);
     }
-}
-
-#unitText {
-    color: white;
-    top: 50%;
-    transform: translateY(-50%);
-    position: relative;
-    font-size: 25vh;
-    z-index: 1000;
-}
-
-@font-face {
-    font-family: GAME_FONT;
-    src: url(fonts/GAME_FONT.woff);
 }
