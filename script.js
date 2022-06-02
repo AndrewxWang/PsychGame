@@ -1,4 +1,4 @@
-var lives = 2;
+var lives = 5;
 var count = 0;
 var score = 0;
 var brainUsed = false;
@@ -50,6 +50,12 @@ function checkAns(letter) {
     }
 }
 
+function skipQuestion(){
+    document.getElementById("skip").style.visibility = "hidden";
+    count++;
+    checkUnit();
+}
+
 function checkUnit(){
     setTimeout(function(){
         if (count%8 == 0){
@@ -58,12 +64,14 @@ function checkUnit(){
         } else if (lives > 0){
             nextQuestion();
         }
-    }, 502);
+    }, 505);
 }
 
 function unitPerks(){
+    document.getElementById("skip").style.visibility = "visible";
     if (lives < 5){
         lives++;
+        document.getElementById("brain").style.display = "none";
         document.getElementById("heart" + lives).style.visibility = "visible";
         scaleInHearts();
     }

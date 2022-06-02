@@ -14,6 +14,12 @@ html {
     overflow: hidden;
 }
 
+br {
+    content: "";
+    display: block;
+    margin-top: 1.5vh;
+}
+
 #background {
     background-image: url("images/background/bg.png");
     top: 0;
@@ -195,6 +201,7 @@ h1 {
 #brain {
     display: none;
     position: fixed;
+    top: -7.5vh;
     transform: translate(calc(50vw - 50%)) scale(0.1);
     transition: transform 0.5s;
 }
@@ -205,7 +212,8 @@ h1 {
 
 #skip {
     position: relative;
-    margin-left: 125vh;
+    margin-left: 130vh;
+    visibility: visible;
 }
 
 @font-face {
