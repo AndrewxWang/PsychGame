@@ -43,11 +43,25 @@ button:hover {
     transform: scale(1.075);
 }
 
+
+#startGame, #instructions, #leaderboard {
+    margin-bottom: 2vh;
+    transform: scale(1.5);
+}
+#startGame:hover, #instructions:hover, #leaderboard:hover {
+    transform: scale(1.7);
+}
+
+#siteButtons {
+    display: block;
+}
+
 h1 {
     font-size: 5vh;
 }
 
 #title {
+    font-size: 15vh;
     padding-top: 1.5vh;
 }
 
@@ -187,6 +201,11 @@ h1 {
 
 #brain:hover {
     cursor: pointer;
+}
+
+#skip {
+    position: relative;
+    margin-left: 125vh;
 }
 
 @font-face {

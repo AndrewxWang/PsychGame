@@ -63,6 +63,7 @@ function nextQuestion() {
 }
 
 function displayGameEnd(determine) {
+    document.getElementById("brain").style.display = "none";
     if (determine == "gameWin") {
         document.getElementById("gameEnd").innerHTML = "YOU WON!";
     } else {
@@ -82,12 +83,13 @@ function displayGameEnd(determine) {
 function getBrain(){
     document.getElementById("brain").style.display = "block";
     setTimeout(function(){
-        document.getElementById("brain").style.transform = "translate(calc(50vw - 50%)) scale(0.75)";
+        document.getElementById("brain").style.transform = "translate(calc(50vw - 50%)) scale(0.5)";
     }, 100);
     console.log("A");
 }
 
 function getAnswer(){
+    brainUsed = true;
     var answer = questionsList[count]["ANS"];
     document.getElementById("unitText").innerHTML = "You look deeply into your subconscious and realize that the answer to this question is: <br> <font color='yellow'>" + answer + ". " + questionsList[count][answer] + "</font>";
     document.getElementById("unitText").style.fontSize = "10vh";

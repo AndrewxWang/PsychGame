@@ -1,6 +1,7 @@
-var lives = 5;
+var lives = 2;
 var count = 0;
 var score = 0;
+var brainUsed = false;
 var questionsUsed = [];
 
 function createPrompt() {
@@ -44,7 +45,7 @@ function checkAns(letter) {
     }, 300);
 
     checkUnit();
-    if (lives == 1){
+    if (lives == 1 && !brainUsed){
         getBrain();
     }
 }
@@ -53,10 +54,22 @@ function checkUnit(){
     setTimeout(function(){
         if (count%8 == 0){
             displayUnit(count);
+            unitPerks();
         } else if (lives > 0){
             nextQuestion();
         }
     }, 502);
+}
+
+function unitPerks(){
+    if (lives < 5){
+        lives++;
+        document.getElementById("heart" + lives).style.visibility = "visible";
+        scaleInHearts();
+    }
+    if (brainUsed){
+        brainUsed = false;
+    }
 }
 
 function changeScore(score) {
@@ -70,6 +83,8 @@ function changeScore(score) {
 }
 
 function loadSite() {
+    document.getElementById("title").style.fontSize = "5vh";
+    document.getElementById("siteButtons").style.display = "none";
     if (!localStorage.highScore) {
         localStorage.highScore = 0;
     }
