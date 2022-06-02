@@ -42,6 +42,14 @@ function checkAns(letter) {
     setTimeout(function(){
         document.getElementById("background").style.animation = "none";  
     }, 300);
+
+    checkUnit();
+    if (lives == 1){
+        getBrain();
+    }
+}
+
+function checkUnit(){
     setTimeout(function(){
         if (count%8 == 0){
             displayUnit(count);
@@ -49,12 +57,7 @@ function checkAns(letter) {
             nextQuestion();
         }
     }, 502);
-    if (lives == 1){
-        getBrain();
-    }
 }
-
-
 
 function changeScore(score) {
     scaleUp("currScore");

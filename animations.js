@@ -80,10 +80,29 @@ function displayGameEnd(determine) {
 }
 
 function getBrain(){
-    document.getElementById("brain").style.visiblity = "visible";
-    document.getElementById("brain").style.transform = "scale(1)";
+    document.getElementById("brain").style.display = "block";
+    setTimeout(function(){
+        document.getElementById("brain").style.transform = "translate(calc(50vw - 50%)) scale(0.75)";
+    }, 100);
+    console.log("A");
 }
 
+function getAnswer(){
+    var answer = questionsList[count]["ANS"];
+    document.getElementById("unitText").innerHTML = "You look deeply into your subconscious and realize that the answer to this question is: <br> <font color='yellow'>" + answer + ". " + questionsList[count][answer] + "</font>";
+    document.getElementById("unitText").style.fontSize = "10vh";
+    document.getElementById("flash").style.display = "block";
+    document.getElementById("flash").style.opacity = "1";
+    document.getElementById("flash").style.backgroundColor = "black";
+    setTimeout(function () {
+        document.getElementById("brain").style.display = "none";
+        document.getElementById("unitText").style.fontSize = "25vh";
+        document.getElementById("flash").style.display = "none";
+        document.getElementById("flash").style.opacity = "0";
+        document.getElementById("flash").style.backgroundColor = "none";
+        document.getElementById("unitText").innerHTML = "";
+    }, 5000);
+}
 //game end (lost)
 function endFlash() {
     document.getElementById("flash").style.display = "block";
