@@ -45,9 +45,6 @@ function checkAns(letter) {
     }, 300);
 
     checkUnit();
-    if (lives == 1 && !brainUsed){
-        getBrain();
-    }
 }
 
 function skipQuestion(){
@@ -63,6 +60,9 @@ function checkUnit(){
             unitPerks();
         } else if (lives > 0){
             nextQuestion();
+            if (lives == 1 && !brainUsed){
+                getBrain();
+            }
         }
     }, 505);
 }
@@ -71,6 +71,7 @@ function unitPerks(){
     document.getElementById("skip").style.visibility = "visible";
     if (lives < 5){
         lives++;
+        document.getElementById("brain").style.transform = "translate(calc(50vw - 50%)) scale(0.1)";
         document.getElementById("brain").style.display = "none";
         document.getElementById("heart" + lives).style.visibility = "visible";
         scaleInHearts();
@@ -88,6 +89,15 @@ function changeScore(score) {
         scaleUp("highscore");
         document.getElementById("highscore").innerHTML = "High Score: " + localStorage.highScore;
     }
+}
+
+function getInstructions(){
+    setTimeout(function(){
+        document.getElementById("myInventory").style.display = "block";        
+        setTimeout(function(){
+            document.getElementById("myInventory").style.opacity = "1";
+        }, 200);
+    }, 200);
 }
 
 function loadSite() {

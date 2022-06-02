@@ -20,10 +20,20 @@
 
         <div id="siteButtons">
             <button id="startGame" onclick="loadSite()">Start Game</button><br>
-            <button id="instructions">How To Play</button><br>
+            <button id="instructions" onclick="getInstructions();">How To Play</button><br>
             <button id="leaderboard">Leaderboard</button>
          </div>
 
+         <div id="myInventory">
+            <center>
+                <h1 id="inv">HOW TO PLAY</h1>
+                <p id="characters">There are 5 units of Psychology: Research Methods/Statistics, Social Psychology, Biological Bases of Behavior, Cognitive Psychology, Psychologist Names</p>
+                <p id="characters">You have 5 hearts, 1 skip, and 1 lifeline when you reach 1 life</p>
+                <p id="characters">Every unit has a total of 8 questions. After completing all 8, your skip resets and you gain 1 heart if you already not full.</p>
+                <input type="button" id="exit" onclick="location.reload();" value="X">
+            </center>
+        </div>
+    
         <center><img id="brain" src="images/icons/brain.png" onclick="getAnswer()"></center>
 
         <div id="hearts">
@@ -79,7 +89,7 @@
         <source src="audio/gameover.ogg" type="audio/ogg">
         <source src="audio/gameover.mp3" type="audio/mpeg">
     </audio>
-    <audio id="nextUnitSFX" controls preload="auto">
+    <audio id="nextUnitSFX" controls preload="aNitto">
         <source src="audio/nextUnit.ogg" type="audio/ogg">
         <source src="audio/nextUnit.mp3" type="audio/mpeg">
     </audio>

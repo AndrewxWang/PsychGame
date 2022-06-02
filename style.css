@@ -92,6 +92,7 @@ h1 {
 }
 
 #prompt h1 {
+    color: white;
     font-size: 6.5vh;
 }
 
@@ -214,6 +215,48 @@ h1 {
     position: relative;
     margin-left: 130vh;
     visibility: visible;
+}
+
+#myInventory {
+    overflow-y: scroll;
+    background-color: white;
+    box-shadow: 0 0 2.5vh rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 45vh;
+    width: 45vh;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    padding: 2vh;
+    top: 41%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: 1s all;
+    z-index: 2147483647;
+}
+
+#myInventory p, h1 {
+    color: black;
+}
+
+#myInventory h1 {
+    font-size: 5vh;
+}
+
+#myInventory::-webkit-scrollbar {
+    width: 1vh;
+}
+
+#myInventory::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#myInventory::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+#myInventory::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 @font-face {

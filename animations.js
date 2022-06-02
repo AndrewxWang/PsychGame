@@ -85,7 +85,6 @@ function getBrain(){
     setTimeout(function(){
         document.getElementById("brain").style.transform = "translate(calc(50vw - 50%)) scale(0.5)";
     }, 100);
-    console.log("A");
 }
 
 function getAnswer(){
@@ -96,6 +95,8 @@ function getAnswer(){
     document.getElementById("flash").style.display = "block";
     document.getElementById("flash").style.opacity = "1";
     document.getElementById("flash").style.backgroundColor = "black";
+    document.getElementById("brain").style.transform = "translate(calc(50vw - 50%)) scale(0.1)";
+
     setTimeout(function () {
         document.getElementById("brain").style.display = "none";
         document.getElementById("unitText").style.fontSize = "25vh";
