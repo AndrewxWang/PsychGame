@@ -8,7 +8,7 @@
     <link rel="icon" href="images/icons/icon.png">
     <link rel="stylesheet" href="style.css">
     <script src="files/questions.js"></script>
-    
+
 </head>
 
 <body>
@@ -21,19 +21,21 @@
         <div id="siteButtons">
             <button id="startGame" onclick="loadSite()">Start Game</button><br>
             <button id="instructions" onclick="getInstructions();">How To Play</button><br>
-            <button id="leaderboard">Leaderboard</button>
-         </div>
+            <button id="leaderboard" onclick=""><a href="https://docs.google.com/spreadsheets/d/1H7bhtRF9tnnP4cmyq1yyuqOqME0_9jC_cb53Cl6m7AQ/edit#gid=1055425715" target="_blank">Leaderboard</a></button>
+        </div>
 
-         <div id="myInventory">
+        <div id="myInventory">
             <center>
                 <h1 id="inv">HOW TO PLAY</h1>
-                <p id="characters">There are 5 units of Psychology: Research Methods/Statistics, Social Psychology, Biological Bases of Behavior, Cognitive Psychology, Psychologist Names</p>
+                <p id="characters">There are 5 units of Psychology: Research Methods/Statistics, Social Psychology,
+                    Biological Bases of Behavior, Cognitive Psychology, Psychologist Names</p>
                 <p id="characters">You have 5 hearts, 1 skip, and 1 lifeline when you reach 1 life</p>
-                <p id="characters">Every unit has a total of 8 questions. After completing all 8, your skip resets and you gain 1 heart if you already not full.</p>
+                <p id="characters">Every unit has a total of 8 questions. After completing all 8, your skip resets and
+                    you gain 1 heart if you already not full.</p>
                 <input type="button" id="exit" onclick="location.reload();" value="X">
             </center>
         </div>
-    
+
         <center><img id="brain" src="images/icons/brain.png" onclick="getAnswer()"></center>
 
         <div id="hearts">
@@ -47,7 +49,7 @@
         <center>
             <div id="prompt">
                 <button id="skip" onclick="skipQuestion()">Skip</button>
-                
+
                 <h1 id="questionNum"></h1>
                 </h1>
                 <p id="question"></p>
@@ -72,8 +74,12 @@
         <div id="gameOver">
             <h1 id="gameEnd"></h1>
             <button onclick="location.reload();">Play Again</button>
-            <button onclick="submitScore();">Submit Score</button>
 
+            <form method="POST" action="https://script.google.com/macros/s/AKfycbzKMOqvO-nvfzN86GUeNA3inQ8B3-tR_Y4wHQHx15zDZWNxuSRxYS9JErBX19jdJh6F/exec">
+                <input id="getScore" name="Score" type="text" placeholder="Score" readonly="readonly" required>
+                <input name="Name" type="text" placeholder="Name" required>
+                <button type="submit">Submit Score</button>
+            </form>
         </div>
     </div>
 

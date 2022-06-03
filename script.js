@@ -2,7 +2,6 @@ var lives = 5;
 var count = 0;
 var score = 0;
 var brainUsed = false;
-var questionsUsed = [];
 
 function createPrompt() {
     document.getElementById("questionNum").innerHTML = "Question " + (count+1) + ":";

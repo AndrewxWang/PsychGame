@@ -70,6 +70,7 @@ function displayGameEnd(determine) {
         document.getElementById("gameEnd").innerHTML = "GAME OVER...";
     }
     setTimeout(function () {
+        document.getElementById("getScore").value = score;
         document.getElementById("prompt").style.opacity = "0";
         document.getElementById("prompt").style.visibility = "hidden";
         setTimeout(function () {
